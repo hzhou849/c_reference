@@ -1,0 +1,14 @@
+
+Printf Data types list
+
+int ---->	%d
+%u  
+%x prints memory address
+
+uint64_t ------>%llu 
+*pointer value ----> %p prints the acutal variable pointer value
+
+//a cast may be required to get argv values is after the cast you can printf %ul for unsigned-ints
+value = strtoul(&argv[2][1], 0, 16);
+    //Debug
+    printf("argc: %d  argv[0]: %p %p %p  addr: %p  addr2: %p\n value: %ul\n", argc, argv[1], argv[2], argv[3], addr, addr2,value);

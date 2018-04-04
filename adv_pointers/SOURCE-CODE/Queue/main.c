@@ -44,7 +44,7 @@ LISTITEM* dequeue() {
 	}
 	else {
 		head.first = temp->next;		// and set the queue header to point to the 'second' item
-		head.last->prev = (LISTITEM*)&head;
+		head.first->prev = (LISTITEM*)&head;
 	}
 	return temp;
 }

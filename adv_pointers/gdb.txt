@@ -1,0 +1,34 @@
+gdb
+
+1)gcc -g <filename.c> 
+- this will generate a.out
+
+
+2)then run gdb a.out
+
+3) set the breakpoints by 'break <#line number> || or <function_name>'
+
+4) run <args (if any)>
+
+print <var_name> if needed
+
+
+NOTES:
+c or continue: Debugger will continue executing until the next break point.
+n or next: Debugger will execute the next line as single instruction.
+s or step: Same as next, but does not treats function as a single instruction, instead goes into the function and executes it line by line.
+
+
+gdb command shortcuts
+Use following shortcuts for most of the frequent gdb operations.
+
+l – list
+p – print
+c – continue
+s – step
+ENTER: pressing enter key would execute the previously executed command again.
+Miscellaneous gdb commands
+l command: Use gdb command l or list to print the source code in the debug mode. Use l line-number to view a specific line number (or) l function to view a specific function.
+bt: backtrack – Print backtrace of all stack frames, or innermost COUNT frames.
+help – View help for a particular gdb topic — help TOPICNAME.
+quit – Exit from the gdb debugger.

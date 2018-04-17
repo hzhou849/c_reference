@@ -1,4 +1,8 @@
-/* 2-14 Multiple Indirection with Strigns */
+/* 2-14 Multiple Indirection with Strigns 
+* '**pptr' pointer to pointers are used bc string is an array of chars think of
+* it as **ptr == *array[]
+* Another example is how main **argv is equivalent to *argv[] 
+*/
 
 #include <stdio.h>
 

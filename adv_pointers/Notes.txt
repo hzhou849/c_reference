@@ -1,0 +1,28 @@
+
+
+C we are dealing with bytes
+
+2-20
+Calloc 
+-clears memory on initialization with nulls 
+- 2 arguments 
+	i) number of elements in the array
+	ii) size of each element 
+
+malloc - you may still have wildcard data from before
+
+both malloc and calloc return a generic pointer, a pointer to void or
+a null pointer if the alloocation of memory fails
+
+
+null pointer - a pointer with zero value
+
+2-21
+free 
+	- be careful if you use this free on memory that was never allocated or on memory that was
+  	  not intended to be allocated.
+
+2-22
+realloc
+	- change the size of block of allocated memory referenced by an existing 
+	  pointer

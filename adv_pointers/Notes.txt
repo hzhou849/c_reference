@@ -1,5 +1,10 @@
-
-
+Coding Projects:
+redo 2-13
+multiple indirection
+Pointer ex address_shift
+kern 117 flag search exercise
+reverse polish calculator pg76
+getline pg 69
 C we are dealing with bytes
 
 2-20
@@ -26,3 +31,53 @@ free
 realloc
 	- change the size of block of allocated memory referenced by an existing 
 	  pointer
+
+
+2-25 
+pointers to structs
+	- predefining data sizes for malloc can be dangerous bc the size can always vary based
+	  on compiler/OS.
+
+2-26
+Data Type Alignment 
+	- Allocating memory inside a struct will occupy contiguous memory locations.
+	- based on how the data is aligned in Structs the size will be different bc of how they are being aligned in memory.
+	- Because A is declared (w/ calloc, they are initialized with NULLS '/0') and only use 4 bytes, 
+	  the next 4 bytes is not enough for a double, so it is padded
+	  'x'and the iniitalization of B happens after those 4 bytes.
+
+case 1:
+typedef struct {
+	int a;				//4bytes
+	int c; 				// 4 bytes
+	double b;			//8bytes
+	long long int d;	// 8bytes
+}MYSTRUCT;
+
+sizeof=24
+
+case 2:
+typedef struct {								
+	int a;				//4bytes								
+	double b;			//8bytes								
+	int c; 				// 4 bytes								
+	long long int d;	// 8bytes								
+}MYSTRUCT;								
+size of = 32								
+
+case 1:
+AAAA CCCC
+BBBB BBBB
+DDDD DDDD = 3x8 = 24 bytes used.
+
+case2:
+A A A A	  \0\0\0\0 (NULLS)
+B B B B    B B B B
+C C C C   \0\0\0\0
+D D D D    D D D D = 4 x 8 = 32bytes used
+
+
+review structs, do pointer exercises
+
+char *str = "hello world"
+-str is a pointer to char whose value is the address fo the char array "hello world"

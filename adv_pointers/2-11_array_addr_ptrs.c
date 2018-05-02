@@ -10,8 +10,12 @@ int main ( int argc, char **argv)
 
 	char get_str2;
 	get_str2 = *str2;
-	printf( "%d %d\n", str2, &str2);
+	printf( "value of str2: %d %d\n", str2, &str2);
 
 
 	return 0;
 }
+// example:
+// 724157296 724157296 Hello
+// 724157288 724157296 Hello
+// (value of str2) 724157296, 724157288

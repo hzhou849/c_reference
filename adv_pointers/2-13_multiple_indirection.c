@@ -36,3 +36,32 @@ int main(int argc, char **argv)
 
 	return 0;
 }
+
+// Output:
+// multiple indirection example
+// 0
+// 1
+// 2
+
+// Loop[0] array address is 0x601050
+// item pointed to by pi is 0
+// item pointed to by ppi is 0x601050
+// item pointed to by double indirection of ppi is 0
+
+// The address of pi is 0x7ffdb93eae78 and the value of pi (what it points to ) is 0x7ffdb93eae78
+
+
+// Loop[1] array address is 0x601050
+// item pointed to by pi is 1
+// item pointed to by ppi is 0x601054
+// item pointed to by double indirection of ppi is 1
+
+// The address of pi is 0x7ffdb93eae78 and the value of pi (what it points to ) is 0x7ffdb93eae78
+
+
+// Loop[2] array address is 0x601050
+// item pointed to by pi is 2
+// item pointed to by ppi is 0x601058
+// item pointed to by double indirection of ppi is 2
+
+// The address of pi is 0x7ffdb93eae78 and the value of pi (what it points to ) is 0x7ffdb93eae78

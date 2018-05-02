@@ -18,3 +18,5 @@
 			p++;
 		return p -s;
 	}
+
+	kern quicksort exercise 5.6 code

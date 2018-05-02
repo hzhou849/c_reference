@@ -1,0 +1,8 @@
+
+// Flush the stdout.
+fprintf(stderr, "I will be printed immediately");
+
+or
+
+printf("Buffered, will be flushed");
+fflush(stdout); // Will now print everything in the stdout buffer

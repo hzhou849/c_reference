@@ -7,6 +7,8 @@ reverse polish calculator pg76
 getline pg 69
 C we are dealing with bytes
 
+https://www.geeksforgeeks.org/memory-layout-of-c-program/
+
 2-20
 Calloc 
 -clears memory on initialization with nulls 

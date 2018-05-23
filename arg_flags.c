@@ -44,6 +44,7 @@ int main(int argc, char *argv[])
 			switch (c) {
 				case 'x':
 					printf("x %d\n", argc);
+					printf("value: %s\n", argv[0]);
 					except = 1;
 					break;
 				case 'n':
@@ -66,6 +67,10 @@ int main(int argc, char *argv[])
 	// change 'argc != 0' if only passing the flag
 	if (argc != 1){
 		printf("Usage: find -x -n <pattern>\n");
+
+		for (int i=0; i<argc; i++) {
+		printf("%s\n", argv[i]);
+	}
 	}
 	// else if(except == 1) {
 	// 	printf("x selected\n");
@@ -73,18 +78,24 @@ int main(int argc, char *argv[])
 	// else if(number == 1) {
 	// 	printf("n selected");
 	// }
+
 	else{
 		// function broken , fix this.
 		printf("do something\n"); 
-		while (getline2(line, MAXLINE) > 0) {
-			lineno++;
-			if ((strstr(line, *argv) !=NULL) != except) {
-				if (number)
-					printf("%ld:", lineno);
-				printf("%s", line);
-				found++;
-			}
-		}
+		// while (getline2(line, MAXLINE) > 0) {
+		// 	lineno++;
+		// 	if ((strstr(line, *argv) !=NULL) != except) {
+		// 		if (number)
+		// 			printf("%ld:", lineno);
+		// 		printf("%s", line);
+		// 		found++;
+		// 	}
+		// }
+
+	}
+
+	for (int i=0; i<argc; i++) {
+		printf("argv[%d] - %s\n",i, argv[i]);
 	}
 	return found;
 }

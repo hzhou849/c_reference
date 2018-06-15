@@ -9,6 +9,23 @@ C we are dealing with bytes
 
 https://www.geeksforgeeks.org/memory-layout-of-c-program/
 
+Memory
+
+Im not entirely sure what you're asking, but I'll try my best to answer.
+The following declares a variable i on the stack:
+
+int i;
+When I ask for an address using &i I get the actual location on the stack.
+
+When I allocate something dynamically using malloc, there are actually TWO pieces of 
+data being stored. The dynamic memory is allocated on the heap, and the pointer itself
+ is allocated on the stack. So in this code:
+
+int* j = malloc(sizeof(int));
+This is allocating space on the heap for an integer. It's also allocating space on 
+the stack for a pointer (j). The variable j's value is set to the address 
+returned by malloc.
+
 2-20
 Calloc 
 -clears memory on initialization with nulls 
@@ -37,6 +54,9 @@ realloc
 
 2-25 
 pointers to structs
+	- Memory for ptrs to structs needs to be allocated explicitly bc new stucts can be
+	  created/deleted during execution of the program and since those can come and go 
+	  at runtime, the memory needed is not known and cant be allocated in advance.
 	- predefining data sizes for malloc can be dangerous bc the size can always vary based
 	  on compiler/OS.
 
@@ -83,3 +103,9 @@ review structs, do pointer exercises
 
 char *str = "hello world"
 -str is a pointer to char whose value is the address fo the char array "hello world"
+
+
+
+3 35 - To free or not to free memory
+- allocated memory generally does not need to be freed if you are still using it.
+- generally it will be freed upon termination of the program.

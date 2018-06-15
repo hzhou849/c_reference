@@ -8,6 +8,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+typedef struct d_container {
+	struct d_containter *next;
+	int  data;
+	char arr[10]; 
+}D_CONTAINER;
+
 typedef struct listitem {
 	struct listitem *next;		// ptr to next item
 	int data;					// some data

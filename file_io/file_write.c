@@ -4,6 +4,7 @@
 
 Opens a text file for both reading and writing. 
 It first truncates the file to zero length if it exists, otherwise creates a file if it does not exist.
+gets current working directory and assigns it to cwd variable to put outputed
  */
 
 // #include <unistd.h>
@@ -27,6 +28,7 @@ It first truncates the file to zero length if it exists, otherwise creates a fil
 
 int main() {
 	char cwd[1024];
+	// allocate memory to store the size of the characters for current working directory
 	if (getcwd(cwd, sizeof(cwd)) != NULL)
 		fprintf(stdout, "Current working dir: %s\n", cwd);
 	else

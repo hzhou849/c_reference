@@ -1,5 +1,6 @@
 /* Getopt command line flag handler
  *
+ * An example of how to implement the Getopt flag function
  *
  */
 
